@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def show
@@ -19,7 +18,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = "Article was create successfully"
+      flash[:notice] = "Article was created successfully."
       redirect_to @article
     else
       render 'new'
@@ -28,7 +27,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:notice] = "Article was updated successfully"
+      flash[:notice] = "Article was updated successfully."
       redirect_to @article
     else
       render 'edit'
