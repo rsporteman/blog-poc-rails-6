@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'pages#hello'
+  root 'pages#home'
   resources :articles
 end
